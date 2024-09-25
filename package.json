@@ -1,0 +1,14 @@
+{
+    "name": "portfolio-website",
+    "version": "1.0.0",
+    "description": "Portfolio website with 3D features and Node.js backend",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "body-parser": "^1.19.0"
+    }
+  }
+  
