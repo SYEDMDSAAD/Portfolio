@@ -8,6 +8,8 @@
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
         <title>Portfolio website complete</title>
     </head>
@@ -42,7 +44,7 @@
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Saad</span><br>Full Stack Developer</h1>
 
-                    <a href="#" class="button">Contact</a>
+                    <a href="#contact" class="button">Contact<a class="nav__link"></a></a>
                 </div>
 
                 <div class="home__social">
@@ -62,7 +64,7 @@
                         </mask>
                         <g mask="url(#mask0)">
                             <!--<path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"-->
-                            <image class="home__blob-img" x="150" y="-10" href="D:\VsCode\Portfolio\saad.jpg"/>
+                            <image class="home__blob-img" x="150" y="-10" href="saad.jpg"/>
                         </g>
                     </svg>
                 </div>
@@ -74,12 +76,13 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="D:\VsCode\Portfolio\saad.jpg" alt="">
+                        <img src="saad.jpg" alt="">
                     </div>
                     
                     <div>
                         <h2 class="about__subtitle">I'am Saad</h2>
-                        <p class="about__text">I study in PICT</p>           
+                        <p class="about__text">I'm currently pursuing a B.E. in Information Technology at PICT Pune. As a passionate full stack developer, I enjoy building dynamic and responsive web applications. With skills across both frontend and backend development, I aim to create seamless user experiences while efficiently managing databases and server-side logic. My focus is on learning, growing, and applying cutting-edge technologies to solve real-world problems.</p> 
+
                     </div>                                   
                 </div>
             </section>
@@ -87,11 +90,9 @@
             <!--CV-->
             <section class="cv section" id="cv">
                 <h2 class="section-title">CV</h2>
-                <div class="cv__container bd-grid">
+                <div class="cv__container bd-grid12">
                     <div>
-                        <h2 class="cv__subtitle">I'am Saad</h2>
-                        <p class="cv__text">I study in PICT</p>
-                        <a href="D:\VsCode\Portfolio\I2K221224_Syed_Saad.pdf" download class="cv__download">Download CV</a>
+                        <a href="I2K221224_Syed_Saad.pdf" download class="cv__download" target="_blank"><div class="cv__container bd-grid12"> Download CV</div></a>
                     </div>
                 </div>
             </section>
@@ -106,14 +107,26 @@
                         <p class="skills__text">Skills</p>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
+                                <i class='bx bxl-java skills__icon_java'></i>
+                                <span class="skills__name">JAVA</span>
+                            </div>
+                            <div class="skills__bar skills__java">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage"></span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon_html'></i>
                                 <span class="skills__name">HTML5</span>
                             </div>
                             <div class="skills__bar skills__html">
 
                             </div>
                             <div>
-                                <span class="skills__percentage">95%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                         <div class="skills__data">
@@ -125,37 +138,37 @@
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">85%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <i class='bx bxl-javascript skills__icon_javascript' ></i>
                                 <span class="skills__name">JAVASCRIPT</span>
                             </div>
                             <div class="skills__bar skills__js">
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">65%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
+                                <i class='bx bxl-c-plus-plus skills__icon'></i>
+                                <span class="skills__name">C++</span>
                             </div>
-                            <div class="skills__bar skills__ux">
+                            <div class="skills__bar skills__cpp">
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">85%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                     </div>
                     
                     <div>              
-                        <img src="D:\VsCode\Portfolio\work3.jpg" alt="" class="skills__img">
+                        <img src="work3.jpg" alt="" class="skills__img">
                     </div>
                 </div>
             </section>
@@ -165,23 +178,24 @@
                 <h2 class="section-title">Work</h2>
 
                 <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="D:\VsCode\Portfolio\work1.jpg" alt="">
+                    <a href="https://trackmycarbon.software/" class="work__img" target="_blank">
+                        <img src="work1.png" alt="Track My Carbon">
+                    </a>
+                    
+                    <a href="https://github.com/SmitDeshmukh16/Legal-Chatbot" class="work__img" target="_blank">
+                        <img src="work2.jpg" alt="Law Chatbot">
                     </a>
                     <a href="" class="work__img">
-                        <img src="D:\VsCode\Portfolio\work2.jpg" alt="">
+                        <img src="work3.jpg" alt="">
                     </a>
                     <a href="" class="work__img">
-                        <img src="D:\VsCode\Portfolio\work3.jpg" alt="">
+                        <img src="work4.jpg" alt="">
                     </a>
                     <a href="" class="work__img">
-                        <img src="D:\VsCode\Portfolio\work4.jpg" alt="">
+                        <img src="work5.jpg" alt="">
                     </a>
                     <a href="" class="work__img">
-                        <img src="D:\VsCode\Portfolio\work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="D:\VsCode\Portfolio\work6.jpg" alt="">
+                        <img src="work6.jpg" alt="">
                     </a>
                 </div>
             </section>
@@ -189,29 +203,56 @@
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
-
+            
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
+                    <form id="contactForm" class="contact__form">
+                        <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                        <textarea name="message" placeholder="Your message" cols="0" rows="10" class="contact__input" required></textarea>
+                        <input type="submit" value="Send" class="contact__button button">
                     </form>
                 </div>
             </section>
-        </main>
+            
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent default form submission
+            
+                    const formData = {
+                        name: this.name.value,
+                        email: this.email.value,
+                        message: this.message.value
+                    };
+            
+                    fetch('http://localhost:5000/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        this.reset(); // Clear form fields
+                    })
+                    .catch(error => {
+                        alert('Error: Could not send the message. Please try again later.');
+                    });
+                });
+            </script>
+        </main>    
 
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <p class="footer__title">Marlon</p>
+            <p class="footer__title">Syed Mohammad Saad</p>
             <div class="footer__social">
                 <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
                 <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+            <p class="footer__copy">&#169; All rigths reserved</p>
         </footer>
-
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>

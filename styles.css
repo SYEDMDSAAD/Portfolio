@@ -111,6 +111,15 @@ img {
   margin-right: var(--margin-bottom-2);
 }
 
+.bd-grid12 {
+    max-width: 1024px;
+    display: grid;
+    font-size: 1.5rem;
+    color:purple;
+    margin-left: var(--margin-bottom-2);
+    margin-right: var(--margin-bottom-2);
+  }
+
 .l-header {
   width: 100%;
   position: fixed;
@@ -309,6 +318,24 @@ img {
   color: var(--primary-color);
 }
 
+.skills__icon_java {
+    font-size: 2rem;
+    margin-right: var(--margin-bottom-2);
+    color: orangered;
+  }
+
+.skills__icon_html {
+    font-size: 2rem;
+    margin-right: var(--margin-bottom-2);
+    color: orangered;
+  }
+
+.skills__icon_javascript {
+    font-size: 2rem;
+    margin-right: var(--margin-bottom-2);
+    color: yellow;
+  }  
+
 .skills__names {
   display: flex;
   align-items: center;
@@ -325,20 +352,33 @@ img {
 }
 
 .skills__html {
-  width: 95%;
+  width: 100%;
 }
 
 .skills__css {
-  width: 85%;
+  width: 100%;
 }
 
 .skills__js {
-  width: 65%;
+  width: 100%;
 }
 
 .skills__ux {
-  width: 85%;
+  width: 100%;
 }
+
+.skills__java {
+    color: orangered;
+    width: 100%;
+  }
+
+.skills__cpp {
+    width: 100%;
+  }
+
+.skills__dbms {
+    width: 100%;
+  }  
 
 .skills__img {
   border-radius: 0.5rem;
@@ -558,3 +598,18 @@ img {
     width: 450px;
   }
 }
+
+@media screen and (min-width: 992px) {
+    .bd-grid12 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .home {
+      padding: 10rem 0 2rem;
+    }
+  
+    .home__img {
+      width: 450px;
+    }
+  }
