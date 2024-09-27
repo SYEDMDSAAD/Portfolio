@@ -1,0 +1,19 @@
+{
+    "name": "portfolio-website",
+    "version": "1.0.0",
+    "description": "Portfolio website with 3D features and Node.js backend",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "node server/server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.0",
+        "nodemailer": "^6.9.15"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
