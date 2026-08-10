@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Facial emotion detection driving a music recommendation queue">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="25%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#a855f7" stop-opacity=".24"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="#0b0b12"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#halo)"/>
+
+  <text x="60" y="58" fill="#22d3ee" font-family="monospace" font-size="13" letter-spacing="1.5">EMOTION → PLAYLIST</text>
+
+  <!-- face mesh -->
+  <g transform="translate(70 110)">
+    <rect width="240" height="240" rx="20" fill="#ffffff" fill-opacity=".03" stroke="#ffffff" stroke-opacity=".1"/>
+    <g stroke="#22d3ee" stroke-opacity=".6" stroke-width="2" fill="none">
+      <path d="M24 24h-0M24 44V24h20M216 44V24h-20M24 196v20h20M216 196v20h-20"/>
+    </g>
+    <ellipse cx="120" cy="118" rx="66" ry="80" fill="none" stroke="url(#g)" stroke-width="2.5"/>
+    <g stroke="#ffffff" stroke-opacity=".18" stroke-width="1">
+      <path d="M120 38v160M54 118h132M76 66l88 104M164 66L76 170"/>
+    </g>
+    <g fill="#22d3ee">
+      <circle cx="96" cy="102" r="4"/><circle cx="144" cy="102" r="4"/>
+      <circle cx="120" cy="132" r="4"/><circle cx="94" cy="158" r="4"/>
+      <circle cx="146" cy="158" r="4"/><circle cx="120" cy="166" r="4"/>
+      <circle cx="60" cy="112" r="3.5"/><circle cx="180" cy="112" r="3.5"/>
+      <circle cx="120" cy="40" r="3.5"/><circle cx="120" cy="196" r="3.5"/>
+    </g>
+    <path d="M94 156a30 22 0 0 0 52 0" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- arrow + label -->
+  <g stroke="url(#g)" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M330 230h58M392 230l-11-6M392 230l-11 6"/>
+  </g>
+  <g transform="translate(410 206)">
+    <rect width="118" height="46" rx="12" fill="none" stroke="url(#g)" stroke-width="2"/>
+    <text x="59" y="29" fill="#e6e6f2" font-family="monospace" font-size="14" text-anchor="middle" letter-spacing="1.5">HAPPY</text>
+  </g>
+
+  <!-- queue -->
+  <g transform="translate(556 110)" font-family="monospace">
+    <text x="0" y="12" fill="#7d7d96" font-size="10" letter-spacing="1.2">QUEUED FOR YOU</text>
+    <g fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".1">
+      <rect y="26" width="184" height="52" rx="12"/>
+      <rect y="90" width="184" height="52" rx="12"/>
+      <rect y="154" width="184" height="52" rx="12"/>
+    </g>
+    <g fill="url(#g)">
+      <circle cx="30" cy="52" r="13"/><circle cx="30" cy="116" r="13"/><circle cx="30" cy="180" r="13"/>
+    </g>
+    <g fill="#0b0b12"><path d="M26 46l10 6-10 6zM26 110l10 6-10 6zM26 174l10 6-10 6z"/></g>
+    <g fill="#ffffff" fill-opacity=".22">
+      <rect x="56" y="44" width="104" height="7" rx="3.5"/><rect x="56" y="108" width="88" height="7" rx="3.5"/><rect x="56" y="172" width="112" height="7" rx="3.5"/>
+    </g>
+    <g fill="#ffffff" fill-opacity=".1">
+      <rect x="56" y="59" width="62" height="6" rx="3"/><rect x="56" y="123" width="70" height="6" rx="3"/><rect x="56" y="187" width="54" height="6" rx="3"/>
+    </g>
+  </g>
+
+  <!-- waveform -->
+  <g fill="url(#g)" opacity=".85">
+    <rect x="410" y="300" width="6" height="24" rx="3"/><rect x="424" y="288" width="6" height="48" rx="3"/>
+    <rect x="438" y="276" width="6" height="72" rx="3"/><rect x="452" y="294" width="6" height="36" rx="3"/>
+    <rect x="466" y="266" width="6" height="92" rx="3"/><rect x="480" y="286" width="6" height="52" rx="3"/>
+    <rect x="494" y="298" width="6" height="28" rx="3"/><rect x="508" y="280" width="6" height="64" rx="3"/>
+    <rect x="522" y="292" width="6" height="40" rx="3"/><rect x="536" y="272" width="6" height="80" rx="3"/>
+    <rect x="550" y="296" width="6" height="32" rx="3"/><rect x="564" y="284" width="6" height="56" rx="3"/>
+    <rect x="578" y="300" width="6" height="24" rx="3"/><rect x="592" y="278" width="6" height="68" rx="3"/>
+    <rect x="606" y="294" width="6" height="36" rx="3"/><rect x="620" y="288" width="6" height="48" rx="3"/>
+  </g>
+
+  <text x="70" y="404" fill="#6f6f88" font-family="monospace" font-size="12" letter-spacing="1.4">PYTHON · COMPUTER VISION · SPOTIFY API</text>
+</svg>

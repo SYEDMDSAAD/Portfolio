@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="TLS handshake between client and server with AES-256-GCM encryption">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#a855f7" stop-opacity=".24"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="#0b0b12"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  <rect width="800" height="450" fill="url(#halo)"/>
+
+  <text x="60" y="62" fill="#22d3ee" font-family="monospace" font-size="13" letter-spacing="1.5">TLS 1.2 HANDSHAKE</text>
+
+  <!-- endpoints -->
+  <g fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".12">
+    <rect x="60" y="150" width="150" height="150" rx="18"/>
+    <rect x="590" y="150" width="150" height="150" rx="18"/>
+  </g>
+  <g fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="105" y="196" width="60" height="44" rx="6"/><path d="M120 254h30M135 240v14"/>
+    <rect x="622" y="192" width="86" height="30" rx="6"/><rect x="622" y="232" width="86" height="30" rx="6"/>
+    <path d="M638 207h.01M638 247h.01"/>
+  </g>
+  <text x="135" y="330" fill="#8f8fa8" font-family="monospace" font-size="12" text-anchor="middle" letter-spacing="1.2">CLIENT</text>
+  <text x="665" y="330" fill="#8f8fa8" font-family="monospace" font-size="12" text-anchor="middle" letter-spacing="1.2">SERVER</text>
+
+  <!-- handshake arrows -->
+  <g stroke="url(#g)" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M215 180h150M368 180l-12-6M368 180l-12 6"/>
+    <path d="M585 270H435M432 270l12-6M432 270l12 6"/>
+  </g>
+  <text x="290" y="170" fill="#c9c9de" font-family="monospace" font-size="11" text-anchor="middle">ClientHello</text>
+  <text x="510" y="260" fill="#c9c9de" font-family="monospace" font-size="11" text-anchor="middle">X.509 cert</text>
+
+  <!-- centre lock / session key -->
+  <g transform="translate(400 225)">
+    <circle r="52" fill="#0b0b12" stroke="url(#g)" stroke-width="2.5"/>
+    <g transform="translate(-19 -22)" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round">
+      <rect x="4" y="18" width="30" height="24" rx="5"/>
+      <path d="M11 18v-6a8 8 0 0 1 16 0v6"/>
+    </g>
+    <text y="34" fill="#8f8fa8" font-family="monospace" font-size="9" text-anchor="middle">SESSION KEY</text>
+  </g>
+
+  <!-- encrypted channel -->
+  <path d="M215 225h130M455 225h130" stroke="#22d3ee" stroke-opacity=".5" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <g transform="translate(60 372)">
+    <rect width="200" height="30" rx="8" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="16" y="20" fill="#e6e6f2" font-family="monospace" font-size="11">AES-256-GCM</text>
+  </g>
+  <g transform="translate(276 372)">
+    <rect width="180" height="30" rx="8" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="16" y="20" fill="#e6e6f2" font-family="monospace" font-size="11">ECDHE-RSA</text>
+  </g>
+  <g transform="translate(472 372)">
+    <rect width="268" height="30" rx="8" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="16" y="20" fill="#e6e6f2" font-family="monospace" font-size="11">PERFECT FORWARD SECRECY</text>
+  </g>
+</svg>
