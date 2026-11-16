@@ -1,882 +1,800 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Syed Mohammad Saad — Software Engineer building secure, scalable distributed systems in Java and Python. B.E. Information Technology, PICT Pune (CGPA 8.94). Spring Boot, FastAPI, Kubernetes, ML. Two published research papers.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syed Mohammad Saad · Software Engineer</title>
+<meta name="description" content="Syed Mohammad Saad, software engineer in Pune. Building FinTwin AI, an AI money copilot for young Indian earners. Java, Spring Boot, Python, FastAPI, LLMs. Contributor to Elasticsearch and Apache Lucene.">
 <meta name="author" content="Syed Mohammad Saad">
-<meta name="theme-color" content="#0a0a0f">
+<meta name="theme-color" content="#08080b">
+<link rel="canonical" href="https://syedmdsaad.github.io/Portfolio/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Syed Mohammad Saad — Software Engineer">
-<meta property="og:description" content="Software Engineer building secure, scalable distributed systems in Java and Python. Solo-architected FinTwin.ai — four services, Kubernetes, ~180 automated tests.">
-<meta property="og:image" content="https://syedmdsaad.github.io/Portfolio/saad.jpg">
-<meta property="og:image:alt" content="Syed Mohammad Saad">
+<meta property="og:site_name" content="Syed Mohammad Saad">
+<meta property="og:title" content="Syed Mohammad Saad · Software Engineer">
+<meta property="og:description" content="Backend systems in Java and Python that are secure, tested and made to keep running. Building FinTwin AI, an AI money copilot for India.">
+<meta property="og:image" content="https://syedmdsaad.github.io/Portfolio/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Syed Mohammad Saad, Software Engineer. Building FinTwin AI.">
 <meta property="og:url" content="https://syedmdsaad.github.io/Portfolio/">
 <meta name="twitter:card" content="summary_large_image">
 
-<title>Syed Mohammad Saad — Software Engineer</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%236366f1'/><text x='50' y='70' font-size='58' font-family='Inter,sans-serif' font-weight='700' fill='white' text-anchor='middle'>S</text></svg>">
+<script>
+  // Theme and JS flags before first paint, so there is no flash.
+  (function () {
+    var d = document.documentElement, t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    d.setAttribute('data-theme', t);
+    d.classList.add('js');
+  })();
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- ========== SCROLL PROGRESS ========== -->
-<div class="progress" id="progress"></div>
+<!-- ============ ICONS ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.22-3.37-1.22-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.65h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.95-3.07-1.95 0-2.25 1.46-2.25 2.97V21h-4V9z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-merge" viewBox="0 0 16 16"><path fill="currentColor" d="M5.45 5.15A2.25 2.25 0 1 0 3.75 5.4v5.2a2.25 2.25 0 1 0 1.5 0V8.05c.68.6 1.57.95 2.5.95h1.53a2.25 2.25 0 1 0 0-1.5H7.75c-1.2 0-2.2-.95-2.3-2.15zM4.5 2.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm0 9.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm6.75-3.75a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0z"/></symbol>
+    <symbol id="i-pr" viewBox="0 0 16 16"><path fill="currentColor" d="M1.5 3.25a2.25 2.25 0 1 1 3 2.12v5.26a2.25 2.25 0 1 1-1.5 0V5.37A2.25 2.25 0 0 1 1.5 3.25zm5.68-.53 1.6-1.6a.25.25 0 0 1 .43.18V2.5h1.04A2.75 2.75 0 0 1 13 5.25v5.38a2.25 2.25 0 1 1-1.5 0V5.25c0-.69-.56-1.25-1.25-1.25H9.2v1.2a.25.25 0 0 1-.42.18l-1.6-1.6a.25.25 0 0 1 0-.36zM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></g></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5 5 2.5-1.5-7.5"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  </defs>
+</svg>
 
-<!-- ========== BACKGROUND ========== -->
-<div class="bg" aria-hidden="true">
-  <div class="bg__grid"></div>
-  <div class="bg__orb bg__orb--1"></div>
-  <div class="bg__orb bg__orb--2"></div>
-  <div class="bg__orb bg__orb--3"></div>
-  <div class="bg__noise"></div>
-</div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
-<!-- ========== HEADER ========== -->
+<!-- ============ HEADER ============ -->
 <header class="header" id="header">
-  <nav class="nav container">
-    <a href="#home" class="nav__logo">
-      <span class="nav__logo-mark">S</span>
-      <span class="nav__logo-text">Saad<span class="dot">.</span></span>
-    </a>
+  <a href="#top" class="logo" aria-label="Syed Mohammad Saad, back to top">
+    <span class="logo__mark">S</span>
+    <span class="logo__name">Saad</span>
+  </a>
 
-    <div class="nav__menu" id="nav-menu">
-      <ul class="nav__list">
-        <li><a href="#home" class="nav__link is-active">Home</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#experience" class="nav__link">Experience</a></li>
-        <li><a href="#publication" class="nav__link">Research</a></li>
-        <li><a href="#skills" class="nav__link">Skills</a></li>
-        <li><a href="#work" class="nav__link">Work</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
-      </ul>
-      <div class="nav__menu-foot">
-        <a href="SyedMohammadSaad_Resume.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Resume</a>
-        <a href="SyedMohammadSaad_CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">CV</a>
-      </div>
-    </div>
-
-    <div class="nav__actions">
-      <button class="icon-btn" id="theme-toggle" aria-label="Toggle colour theme" title="Toggle theme">
-        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
-      <a href="SyedMohammadSaad_Resume.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm nav__resume">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        Resume
-      </a>
-      <button class="icon-btn nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
+  <nav class="nav" aria-label="Sections">
+    <span class="nav__pill" id="nav-pill" aria-hidden="true"></span>
+    <a href="#fintwin" class="nav__link">FinTwin</a>
+    <a href="#open-source" class="nav__link">Open source</a>
+    <a href="#work" class="nav__link">Work</a>
+    <a href="#research" class="nav__link">Research</a>
+    <a href="#about" class="nav__link">About</a>
+    <a href="#contact" class="nav__link">Contact</a>
   </nav>
+
+  <div class="header__actions">
+    <button class="kbd-btn" id="cmdk-open" type="button" aria-label="Open command menu">
+      <svg class="ic"><use href="#i-search"/></svg>
+      <span class="kbd-btn__label">Jump to</span>
+      <kbd id="cmdk-hint">Ctrl K</kbd>
+    </button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
+      <svg class="ic ic--sun"><use href="#i-sun"/></svg>
+      <svg class="ic ic--moon"><use href="#i-moon"/></svg>
+    </button>
+    <a href="Syed_MohammadSaad_Resume.pdf" target="_blank" rel="noopener" class="btn btn--light btn--sm header__resume">Résumé</a>
+    <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="ic"><use href="#i-menu"/></svg>
+    </button>
+  </div>
 </header>
 
-<main>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Sections">
+    <a href="#fintwin">FinTwin AI</a>
+    <a href="#open-source">Open source</a>
+    <a href="#work">Work</a>
+    <a href="#research">Research</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a href="Syed_MohammadSaad_Resume.pdf" target="_blank" rel="noopener" class="btn btn--primary">Résumé <svg class="ic"><use href="#i-down"/></svg></a>
+    <a href="SyedMohammadSaad_CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost">Full CV</a>
+  </div>
+</div>
 
-<!-- ========== HERO ========== -->
-<section class="hero" id="home">
-  <div class="container hero__container">
+<main id="main">
 
-    <div class="hero__content">
-      <div class="badge reveal">
-        <span class="badge__pulse"></span>
-        Open to Software Engineer roles &middot; Graduated &middot; 8.94 CGPA
-      </div>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <canvas class="hero__canvas" id="dots" aria-hidden="true"></canvas>
+  <div class="hero__aurora" aria-hidden="true"></div>
 
-      <h1 class="hero__title reveal">
-        Syed Mohammad<br>
-        <span class="grad">Saad</span>
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <a class="status" href="#contact">
+        <span class="status__dot"></span>
+        Open to backend / software engineer roles
+        <svg class="ic"><use href="#i-arrow"/></svg>
+      </a>
+
+      <h1 class="hero__name" aria-label="Syed Mohammad Saad">
+        <span class="line"><span class="word" data-split>Syed</span> <span class="word" data-split>Mohammad</span></span>
+        <span class="line"><span class="word word--accent" data-split>Saad</span><span class="hero__period">.</span></span>
       </h1>
 
-      <p class="hero__role reveal">
-        <span class="hero__role-prefix">&gt;</span>
-        <span id="typed" class="hero__typed"></span><span class="caret"></span>
+      <p class="hero__lede reveal">
+        I build backend systems that are <em>secure</em>, <em>tested</em> and <em>made&nbsp;to&nbsp;keep&nbsp;running</em>.
       </p>
-
       <p class="hero__text reveal">
-        I build <strong>secure, scalable distributed systems</strong> in Java and Python.
-        Most recently I solo-architected <strong>FinTwin.ai</strong> end to end — four
-        services, a self-hosted LLM copilot, Kubernetes deployment and ~180 automated
-        tests. Two published research papers, and graduated with a B.E. in Information
-        Technology from PICT Pune with an <strong>8.94 CGPA</strong>.
+        Software engineer in Pune, working in Java and Python. Right now I'm building
+        <a href="#fintwin" class="inline-link">FinTwin AI</a>, an AI money copilot for young Indian earners,
+        live in public beta. I've also contributed to Elasticsearch and Apache&nbsp;Lucene.
       </p>
 
-      <div class="hero__actions reveal">
-        <a href="#work" class="btn btn--primary">
-          View my work
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <div class="hero__cta reveal">
+        <a href="#fintwin" class="btn btn--primary magnetic">
+          See FinTwin AI <svg class="ic"><use href="#i-arrow"/></svg>
         </a>
-        <a href="#contact" class="btn btn--ghost">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>
-          Get in touch
+        <a href="Syed_MohammadSaad_Resume.pdf" target="_blank" rel="noopener" class="btn btn--ghost magnetic">
+          <svg class="ic"><use href="#i-down"/></svg> Résumé
         </a>
-      </div>
-
-      <div class="hero__socials reveal">
-        <a href="https://github.com/SYEDMDSAAD" target="_blank" rel="noopener" class="social" aria-label="GitHub" title="GitHub">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.22-3.37-1.22-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/syed-mohammad-saad-640144213/" target="_blank" rel="noopener" class="social" aria-label="LinkedIn" title="LinkedIn">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.65h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.95-3.07-1.95 0-2.25 1.46-2.25 2.97V21h-4V9z"/></svg>
-        </a>
-        <a href="mailto:mdsaadsyed29@gmail.com" class="social" aria-label="Email" title="Email">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>
-        </a>
-        <span class="hero__socials-sep"></span>
-        <a href="mailto:mdsaadsyed29@gmail.com" class="hero__mail">mdsaadsyed29@gmail.com</a>
+        <button class="copy-chip" type="button" data-copy="mdsaadsyed29@gmail.com" aria-label="Copy email address">
+          <span>mdsaadsyed29@gmail.com</span>
+          <svg class="ic ic--copy"><use href="#i-copy"/></svg>
+          <svg class="ic ic--ok"><use href="#i-check"/></svg>
+        </button>
       </div>
     </div>
 
+    <!-- Live trace -->
     <div class="hero__visual reveal">
-      <div class="portrait">
-        <div class="portrait__glow"></div>
-        <div class="portrait__ring"></div>
-        <img src="saad.jpg" alt="Portrait of Syed Mohammad Saad" class="portrait__img">
-        <div class="chip chip--1">Java · Spring Boot</div>
-        <div class="chip chip--2">Docker · K8s</div>
-        <div class="chip chip--3">Python · FastAPI</div>
-      </div>
+      <figure class="trace" id="trace" aria-label="An illustrative trace of one FinTwin copilot question moving through the services">
+        <div class="trace__bar">
+          <span class="trace__dots"><i></i><i></i><i></i></span>
+          <span class="trace__title">trace <b>7f3a9c</b> · POST /api/v1/copilot</span>
+          <span class="trace__live"><i></i>live</span>
+        </div>
+        <div class="trace__q">
+          <span class="trace__prompt">›</span>
+          <span class="trace__qtext" data-q="How much did I spend on food last month?">How much did I spend on food last month?</span>
+        </div>
+        <ol class="trace__spans">
+          <li style="--s:0;--w:100;--c:var(--c-web)"><span class="sp__name"><b>web</b> POST /copilot</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">1.24s</span></li>
+          <li style="--s:1;--w:2;--c:var(--c-api)"><span class="sp__name"><b>core-api</b> auth · rate limit</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">9ms</span></li>
+          <li style="--s:3.5;--w:1.5;--c:var(--c-api)"><span class="sp__name"><b>core-api</b> sign request token</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">3ms</span></li>
+          <li style="--s:6;--w:92;--c:var(--c-ai)"><span class="sp__name"><b>ai-service</b> tool loop</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">1.14s</span></li>
+          <li style="--s:8;--w:28;--c:var(--c-llm)"><span class="sp__name"><b>llm</b> pick a tool</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">350ms</span></li>
+          <li style="--s:37;--w:11;--c:var(--c-api)"><span class="sp__name"><b>tool</b> get_spending(food)</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">136ms</span></li>
+          <li style="--s:39;--w:5;--c:var(--c-db)"><span class="sp__name"><b>postgres</b> SELECT …</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">58ms</span></li>
+          <li style="--s:49;--w:2;--c:var(--c-ok)"><span class="sp__name"><b>code</b> month-over-month</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">2ms</span></li>
+          <li style="--s:52;--w:46;--c:var(--c-llm)"><span class="sp__name"><b>llm</b> write the answer</span><span class="sp__track"><span class="sp__bar"></span></span><span class="sp__ms">570ms</span></li>
+        </ol>
+        <div class="trace__a">
+          <p class="trace__answer"><span class="trace__atext">You spent ₹8,240 on food in October, 18% more than in September. Most of the jump is Swiggy on weekends.</span></p>
+          <div class="trace__chips">
+            <span><svg class="ic"><use href="#i-check"/></svg>figures from your data</span>
+            <span><svg class="ic"><use href="#i-check"/></svg>maths done in code</span>
+          </div>
+        </div>
+        <figcaption class="trace__note">Illustrative trace of one copilot question</figcaption>
+      </figure>
     </div>
-
   </div>
 
-  <!-- STATS -->
   <div class="container">
-    <div class="stats reveal">
-      <div class="stat">
-        <span class="stat__num" data-count="8.94" data-decimals="2">0</span>
-        <span class="stat__label">CGPA at PICT Pune</span>
+    <dl class="stats reveal">
+      <div class="stat"><dt class="stat__num"><span data-count="1100">1,100</span>+</dt><dd>automated tests in FinTwin</dd></div>
+      <div class="stat"><dt class="stat__num"><span data-count="27">27</span></dt><dd>pull requests to Elasticsearch &amp; Lucene</dd></div>
+      <div class="stat"><dt class="stat__num"><span data-count="2">2</span></dt><dd>published research papers</dd></div>
+      <div class="stat"><dt class="stat__num"><span data-count="8.94" data-decimals="2">8.94</span></dt><dd>CGPA, B.E. IT at PICT Pune</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-label="Technologies I work with">
+  <div class="marquee__track">
+    <ul class="marquee__list">
+      <li>Java 21</li><li>Spring Boot</li><li>Spring Security</li><li>Python</li><li>FastAPI</li><li>LLM tool calling</li><li>PostgreSQL</li><li>Flyway</li><li>Redis</li><li>Docker</li><li>Azure</li><li>AWS</li><li>GitHub Actions</li><li>Grafana</li><li>Testcontainers</li><li>pytest</li><li>React 19</li><li>TypeScript</li><li>MCP</li><li>Ollama</li>
+    </ul>
+    <ul class="marquee__list" aria-hidden="true">
+      <li>Java 21</li><li>Spring Boot</li><li>Spring Security</li><li>Python</li><li>FastAPI</li><li>LLM tool calling</li><li>PostgreSQL</li><li>Flyway</li><li>Redis</li><li>Docker</li><li>Azure</li><li>AWS</li><li>GitHub Actions</li><li>Grafana</li><li>Testcontainers</li><li>pytest</li><li>React 19</li><li>TypeScript</li><li>MCP</li><li>Ollama</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ FINTWIN ============ -->
+<section class="section fintwin" id="fintwin">
+  <div class="container">
+    <header class="sec-head">
+      <span class="eyebrow reveal"><span>01</span> Flagship product</span>
+      <h2 class="sec-title" data-split-words>FinTwin AI. Your money, <em>finally understood</em>.</h2>
+      <p class="sec-sub reveal">
+        An AI money copilot for young Indian earners. It reads bank and UPI statements, sorts every
+        transaction, and answers money questions from the user's own numbers. Designed, built and run end to end.
+      </p>
+      <div class="sec-actions reveal">
+        <a href="https://fintwin-web.azurewebsites.net" target="_blank" rel="noopener" class="btn btn--primary magnetic">
+          Try the live demo <svg class="ic"><use href="#i-out"/></svg>
+        </a>
+        <a href="https://github.com/SYEDMDSAAD/FinTwin.ai" target="_blank" rel="noopener" class="btn btn--ghost magnetic">
+          <svg class="ic"><use href="#i-github"/></svg> Source
+        </a>
+        <span class="sec-actions__note">One click, no sign-up</span>
       </div>
-      <div class="stat">
-        <span class="stat__num" data-count="2" data-suffix="">0</span>
-        <span class="stat__label">Research publications</span>
+    </header>
+
+    <!-- Browser frame with the real product -->
+    <div class="showcase reveal" id="showcase">
+      <div class="browser">
+        <div class="browser__bar">
+          <span class="trace__dots"><i></i><i></i><i></i></span>
+          <span class="browser__url"><svg class="ic"><use href="#i-search"/></svg>fintwin-web.azurewebsites.net</span>
+          <span class="browser__tabs" role="tablist" aria-label="Screens">
+            <button role="tab" class="is-active" data-shot="0" aria-selected="true">Landing</button>
+            <button role="tab" data-shot="1" aria-selected="false">Dashboard</button>
+          </span>
+        </div>
+        <div class="browser__view">
+          <img src="assets/img/fintwin-landing.webp" alt="FinTwin AI landing page: Your money, finally understood" class="is-active" width="1513" height="784" loading="lazy">
+          <img src="assets/img/fintwin-dashboard.webp" alt="FinTwin AI dashboard with income, expenses, savings and the financial health score" width="1513" height="784" loading="lazy">
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat__num" data-count="180" data-suffix="+">0</span>
-        <span class="stat__label">Automated tests on FinTwin</span>
+      <div class="showcase__glow" aria-hidden="true"></div>
+    </div>
+
+    <!-- Scrollytelling chapters -->
+    <div class="story" id="story">
+      <div class="story__stage" aria-hidden="true">
+        <div class="stage">
+
+          <!-- 0: data in -->
+          <div class="scene scene--ledger is-active" data-scene="0">
+            <div class="ledger">
+              <div class="ledger__files"><span>CSV</span><span>PDF</span><span>XLSX</span><span>✉ DKIM-verified alerts</span></div>
+              <div class="ledger__row"><code>UPI/DR/40213/SWIGGY/YESB</code><span class="tagc tagc--food">Food &amp; dining</span><b>₹420</b></div>
+              <div class="ledger__row"><code>UPI/DR/PAYTM-88213/XYZ</code><span class="tagc tagc--shop">Groceries</span><b>₹1,180</b></div>
+              <div class="ledger__row"><code>NEFT/CR/ACME PVT LTD/SAL</code><span class="tagc tagc--inc">Income</span><b class="pos">₹72,000</b></div>
+              <div class="ledger__row"><code>UPI/DR/77120/RAJU KIRANA</code><span class="tagc tagc--local">Local shop</span><b>₹260</b></div>
+              <div class="ledger__row"><code>IMPS/SELF/HDFC→SBI</code><span class="tagc tagc--xfer">Own transfer · excluded</span><b class="muted">₹15,000</b></div>
+              <div class="ledger__foot"><span class="pulse-dot"></span>Learns from every correction you make</div>
+            </div>
+          </div>
+
+          <!-- 1: copilot -->
+          <div class="scene scene--chat" data-scene="1">
+            <div class="chat">
+              <div class="chat__msg chat__msg--me">Can I afford a ₹60,000 phone this month?</div>
+              <div class="chat__tools">
+                <span><i></i>get_income()</span>
+                <span><i></i>get_spending()</span>
+                <span><i></i>get_goals()</span>
+              </div>
+              <div class="chat__msg chat__msg--ai">
+                You'd have <b>₹23,198</b> left after it, below your usual <b>₹31,400</b> buffer. Spreading it over three months keeps your "Goa trip" goal on track.
+              </div>
+              <div class="chat__note"><code>tools(user_id)</code> doesn't exist. The model says <em>what</em> it wants, never <em>whose</em>.</div>
+            </div>
+          </div>
+
+          <!-- 2: architecture -->
+          <div class="scene scene--arch" data-scene="2">
+            <svg class="arch" viewBox="0 0 640 452" role="img" aria-label="FinTwin AI architecture">
+              <path id="ae1" class="edge" d="M320 62 V108"/>
+              <path id="ae2" class="edge" d="M252 133 H152"/>
+              <path id="ae3" class="edge" d="M320 158 V236"/>
+              <path id="ae4" class="edge" d="M388 253 H488"/>
+              <path id="ae5" class="edge edge--tool" d="M488 270 H388"/>
+              <path id="ae6" class="edge" d="M556 286 V364"/>
+              <path id="ae7" class="edge" d="M84 158 V364"/>
+              <path id="ae8" class="edge" d="M300 286 C300 340 200 389 152 389"/>
+              <text class="elabel" x="330" y="89" text-anchor="start">HTTPS</text>
+              <text class="elabel" x="202" y="125" text-anchor="middle">login · 2FA</text>
+              <text class="elabel" x="330" y="201" text-anchor="start">REST · JWT</text>
+              <text class="elabel" x="438" y="245" text-anchor="middle">signed token</text>
+              <text class="elabel elabel--tool" x="438" y="287" text-anchor="middle">tool calls</text>
+              <text class="elabel" x="566" y="329" text-anchor="start">prompt</text>
+              <text class="elabel" x="94" y="265" text-anchor="start">users</text>
+              <text class="elabel" x="236" y="352" text-anchor="middle">JPA</text>
+              <circle class="pkt" r="3"><animateMotion dur="1.60s" begin="0.00s" repeatCount="indefinite"><mpath href="#ae1"/></animateMotion></circle>
+              <circle class="pkt" r="3"><animateMotion dur="1.95s" begin="0.27s" repeatCount="indefinite"><mpath href="#ae2"/></animateMotion></circle>
+              <circle class="pkt" r="3"><animateMotion dur="2.30s" begin="0.54s" repeatCount="indefinite"><mpath href="#ae3"/></animateMotion></circle>
+              <circle class="pkt" r="3"><animateMotion dur="1.60s" begin="0.81s" repeatCount="indefinite"><mpath href="#ae4"/></animateMotion></circle>
+              <circle class="pkt pkt--tool" r="3"><animateMotion dur="1.95s" begin="1.08s" repeatCount="indefinite"><mpath href="#ae5"/></animateMotion></circle>
+              <circle class="pkt" r="3"><animateMotion dur="2.30s" begin="1.35s" repeatCount="indefinite"><mpath href="#ae6"/></animateMotion></circle>
+              <circle class="pkt" r="3"><animateMotion dur="1.60s" begin="1.62s" repeatCount="indefinite"><mpath href="#ae7"/></animateMotion></circle>
+              <circle class="pkt" r="3"><animateMotion dur="1.95s" begin="1.89s" repeatCount="indefinite"><mpath href="#ae8"/></animateMotion></circle>
+              <g class="node"><rect x="252" y="16" width="136" height="46" rx="12"/><text class="ntitle" x="320" y="36" text-anchor="middle">Browser</text><text class="nsub" x="320" y="52" text-anchor="middle">the user</text></g>
+              <g class="node"><rect x="252" y="108" width="136" height="50" rx="12"/><text class="ntitle" x="320" y="130" text-anchor="middle">Web app</text><text class="nsub" x="320" y="147" text-anchor="middle">React 19 · Vite</text></g>
+              <g class="node"><rect x="16" y="108" width="136" height="50" rx="12"/><text class="ntitle" x="84" y="130" text-anchor="middle">Identity</text><text class="nsub" x="84" y="147" text-anchor="middle">Spring Boot · 2FA</text></g>
+              <g class="node"><rect x="252" y="236" width="136" height="50" rx="12"/><text class="ntitle" x="320" y="258" text-anchor="middle">Core API</text><text class="nsub" x="320" y="275" text-anchor="middle">Java 21 · Spring Boot</text></g>
+              <g class="node node--ai"><rect x="488" y="236" width="136" height="50" rx="12"/><text class="ntitle" x="556" y="258" text-anchor="middle">AI service</text><text class="nsub" x="556" y="275" text-anchor="middle">Python · FastAPI</text></g>
+              <g class="node"><rect x="16" y="364" width="136" height="50" rx="12"/><text class="ntitle" x="84" y="386" text-anchor="middle">PostgreSQL</text><text class="nsub" x="84" y="403" text-anchor="middle">26 Flyway migrations</text></g>
+              <g class="node"><rect x="488" y="364" width="136" height="50" rx="12"/><text class="ntitle" x="556" y="386" text-anchor="middle">LLM</text><text class="nsub" x="556" y="403" text-anchor="middle">self-hosted · Ollama</text></g>
+              <text class="afoot" x="320" y="446" text-anchor="middle">Java owns the data, <tspan>Python owns the thinking.</tspan></text>
+            </svg>
+          </div>
+
+          <!-- 3: security -->
+          <div class="scene scene--sec" data-scene="3">
+            <div class="tokens">
+              <div class="tokens__title">Refresh-token family</div>
+              <div class="tokens__chain">
+                <span class="tok">RT₁</span><span class="tok__arrow"></span>
+                <span class="tok">RT₂</span><span class="tok__arrow"></span>
+                <span class="tok">RT₃</span>
+              </div>
+              <div class="tokens__replay"><span class="tok tok--bad">RT₂</span> replayed by someone else</div>
+              <div class="tokens__verdict">Whole family revoked. Everyone signs in again.</div>
+              <div class="tokens__badges"><span>AES-256-GCM fields</span><span>HMAC blind index</span><span>TOTP 2FA</span><span>RBAC</span></div>
+            </div>
+          </div>
+
+          <!-- 4: tests -->
+          <div class="scene scene--ci" data-scene="4">
+            <div class="ci">
+              <div class="ci__head"><span class="ci__ok"><svg class="ic"><use href="#i-check"/></svg></span>All checks passed<span class="ci__sha">main</span></div>
+              <div class="ci__row"><span class="ci__name">ai-service · pytest</span><span class="ci__bar"><i style="--n:448"></i></span><b>448</b></div>
+              <div class="ci__row"><span class="ci__name">backend · JUnit + Testcontainers</span><span class="ci__bar"><i style="--n:378"></i></span><b>378</b></div>
+              <div class="ci__row"><span class="ci__name">frontend · Vitest</span><span class="ci__bar"><i style="--n:267"></i></span><b>267</b></div>
+              <div class="ci__row"><span class="ci__name">identity-service · JUnit</span><span class="ci__bar"><i style="--n:22"></i></span><b>22</b></div>
+              <div class="ci__total"><span>1,115 tests</span><span>6 workflows</span><span>8 Grafana alert rules</span></div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="stat">
-        <span class="stat__num" data-count="11" data-suffix="+">0</span>
-        <span class="stat__label">Shipped projects</span>
+
+      <div class="story__steps">
+        <article class="step" data-step="0">
+          <span class="step__num">Data in</span>
+          <h3>No typing. Statements in, sense out.</h3>
+          <p>Import bank statements as CSV, PDF or Excel, or forward bank alert emails, which are checked with DKIM before anything is trusted. Bank linking through RBI's Account Aggregator framework is in testing.</p>
+          <p>Every transaction is sorted by rules, learned merchant rules and an LLM, and the categorizer learns from each correction. Transfers between a user's own accounts are left out of spending.</p>
+          <div class="scene-inline" aria-hidden="true"></div>
+        </article>
+        <article class="step" data-step="1">
+          <span class="step__num">The copilot</span>
+          <h3>An AI that looks up your real numbers first.</h3>
+          <p>Ask a money question in plain English. A self-hosted LLM runs a tool-calling loop over a read-only data API, so it answers from your income, spending and goals instead of guessing. The maths is done in code, not by the model.</p>
+          <p>The tools have no user-ID parameter, and every question carries a short-lived token signed by the core API, so the model can't be talked into reading someone else's data. An eval suite of real questions, graded by code, measures every prompt or model change.</p>
+          <div class="scene-inline" aria-hidden="true"></div>
+        </article>
+        <article class="step" data-step="2">
+          <span class="step__num">Architecture</span>
+          <h3>Four services, one rule.</h3>
+          <p><strong>Java owns the data, Python owns the thinking.</strong> A React 19 web app, a Spring Boot 3.5 core API on Java 21, a separate identity service, and a FastAPI AI service with no database access of its own. PostgreSQL underneath, with 26 Flyway migrations.</p>
+          <p>When the model needs a user's transactions it has to ask the core API, which decides what that user may see.</p>
+          <div class="scene-inline" aria-hidden="true"></div>
+        </article>
+        <article class="step" data-step="3">
+          <span class="step__num">Security</span>
+          <h3>Built assuming someone will try.</h3>
+          <p>JWT with refresh-token rotation and reuse detection: a replayed token revokes the whole family. TOTP 2FA with replay protection, Google sign-in, account lockout, and RBAC through a custom Spring Security permission evaluator.</p>
+          <p>Sensitive fields are encrypted with AES-256-GCM, with an HMAC blind index so encrypted emails can still be looked up. Rate limits per IP and per user, plus a daily AI allowance.</p>
+          <div class="scene-inline" aria-hidden="true"></div>
+        </article>
+        <article class="step" data-step="4">
+          <span class="step__num">Reliability</span>
+          <h3>Made to keep running.</h3>
+          <p>Resilience4j circuit breakers around the AI: when the model is down, forecasts fall back to a statistical calculation and the app says plainly that AI is offline. Caffeine caching, HikariCP tuning, N+1 fixes and paginated batch jobs.</p>
+          <p>Over 1,100 automated tests, including Testcontainers on real PostgreSQL. Six GitHub Actions workflows, Grafana monitoring with eight alert rules, and every service containerised on Azure App Service.</p>
+          <div class="scene-inline" aria-hidden="true"></div>
+        </article>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ========== ABOUT ========== -->
-<section class="section" id="about">
+<!-- ============ OPEN SOURCE ============ -->
+<section class="section" id="open-source">
   <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">01 — About</span>
-      <h2 class="section__title">Engineer first, <span class="grad">builder</span> always.</h2>
-    </div>
+    <header class="sec-head">
+      <span class="eyebrow reveal"><span>02</span> Open source</span>
+      <h2 class="sec-title" data-split-words>Learning distributed systems <em>from the inside</em>.</h2>
+      <p class="sec-sub reveal">
+        I read and patch large search codebases. That's where most of what I know about distributed systems came from.
+      </p>
+    </header>
 
-    <div class="about">
-      <div class="about__main reveal">
-        <p class="about__lead">
-          I'm an Information Technology graduate of Pune Institute of Computer
-          Technology who builds backends that hold up under load — and the interfaces,
-          schemas and deployment pipelines that sit around them.
-        </p>
-        <p>
-          My clearest proof of that is <strong>FinTwin.ai</strong>: a personal finance
-          platform I architected and shipped alone as a
-          <strong>four-service distributed system</strong> — a React + Vite frontend, a
-          Spring Boot core API on Java 21, a separate identity service and a Python/FastAPI
-          AI service, all on PostgreSQL with Flyway migrations. It runs a self-hosted LLM
-          copilot on Ollama through an OpenAI-style tool-calling loop, so the model queries
-          real data through a secured internal API instead of being prompt-stuffed — and
-          costs nothing per token. It deploys on Kubernetes with zero-downtime rolling
-          updates, autoscales 2&nbsp;&rarr;&nbsp;10 replicas, and is covered by ~180 tests
-          across Testcontainers and pytest.
-        </p>
-        <p>
-          The research side runs in parallel: a real-time yoga pose-correction model
-          (MediaPipe + CNN/XGBoost, 92% accuracy) published at <strong>IEEE ICCCNT
-          2025</strong>, and an MLP/LSTM intrusion-detection system for DoS and DDoS traffic
-          published in the <strong>ISTE journal, 2026</strong>. I care about things that
-          actually run — real error handling, real observability, real tests. Looking for a
-          full-time software engineering role, available to start immediately.
-        </p>
-
-        <div class="about__facts">
-          <div class="fact">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><span>Based in</span><strong>Pune, Maharashtra</strong></div>
-          </div>
-          <div class="fact">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M21 8v6"/><path d="M6.5 10.7V15c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-4.3"/></svg>
-            <div><span>Degree</span><strong>B.E. Information Technology</strong></div>
-          </div>
-          <div class="fact">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
-            <div><span>Available</span><strong>Immediately</strong></div>
-          </div>
-          <div class="fact">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.3 6.6.8-4.9 4.6 1.3 6.8-5.9-3.3-5.9 3.3 1.3-6.8L2.5 9.1l6.6-.8L12 2z"/></svg>
-            <div><span>Focus</span><strong>Backend · Distributed Systems · ML</strong></div>
-          </div>
-        </div>
+    <div class="oss">
+      <div class="oss__list reveal">
+        <div class="oss__listhead"><svg class="ic"><use href="#i-merge"/></svg> Merged</div>
+        <a class="pr" href="https://github.com/elastic/elasticsearch/pull/142940" target="_blank" rel="noopener">
+          <svg class="pr__icon pr__icon--merged"><use href="#i-merge"/></svg>
+          <span class="pr__body">
+            <span class="pr__repo">elastic/elasticsearch <i>#142940</i></span>
+            <span class="pr__title">Document the <code>http_schema</code> field in the AlibabaCloudSearchService configuration</span>
+          </span>
+          <svg class="ic pr__go"><use href="#i-out"/></svg>
+        </a>
+        <a class="pr" href="https://github.com/apache/lucene/pull/15719" target="_blank" rel="noopener">
+          <svg class="pr__icon pr__icon--merged"><use href="#i-merge"/></svg>
+          <span class="pr__body">
+            <span class="pr__repo">apache/lucene <i>#15719</i></span>
+            <span class="pr__title">Improve JavaDocs for the <code>org.apache.lucene.util</code> package</span>
+          </span>
+          <svg class="ic pr__go"><use href="#i-out"/></svg>
+        </a>
+        <a class="pr" href="https://github.com/TheAlgorithms/Java/pull/7275" target="_blank" rel="noopener">
+          <svg class="pr__icon pr__icon--merged"><use href="#i-merge"/></svg>
+          <span class="pr__body">
+            <span class="pr__repo">TheAlgorithms/Java <i>#7275</i></span>
+            <span class="pr__title">Add <code>RemoveStars</code> and <code>ComplexNumberMultiply</code> string algorithms</span>
+          </span>
+          <svg class="ic pr__go"><use href="#i-out"/></svg>
+        </a>
+        <div class="oss__listhead oss__listhead--open"><svg class="ic"><use href="#i-pr"/></svg> Open</div>
+        <a class="pr" href="https://github.com/modelcontextprotocol/typescript-sdk/pull/2974" target="_blank" rel="noopener">
+          <svg class="pr__icon pr__icon--open"><use href="#i-pr"/></svg>
+          <span class="pr__body">
+            <span class="pr__repo">modelcontextprotocol/typescript-sdk <i>#2974</i></span>
+            <span class="pr__title">Deliver task-related requests when an optional task tool is called without a task</span>
+          </span>
+          <svg class="ic pr__go"><use href="#i-out"/></svg>
+        </a>
       </div>
 
-      <aside class="about__side reveal">
-        <h3 class="about__side-title">Education</h3>
-        <ol class="timeline">
-          <li class="timeline__item">
-            <span class="timeline__year">Nov 2022 — Jun 2026</span>
-            <h4>B.E. Information Technology</h4>
-            <p>Pune Institute of Computer Technology, Pune</p>
-            <span class="pill">CGPA 8.94 / 10</span>
-          </li>
-          <li class="timeline__item">
-            <span class="timeline__year">2021</span>
-            <h4>HSC — Science</h4>
-            <p>Sarosh Junior College, Chhatrapati Sambhajinagar</p>
-            <span class="pill">GPA 9.89</span>
-          </li>
-          <li class="timeline__item">
-            <span class="timeline__year">2019</span>
-            <h4>CBSE — Class X</h4>
-            <p>Queens English High School, Parbhani</p>
-            <span class="pill">GPA 9.64</span>
-          </li>
-        </ol>
+      <aside class="oss__side reveal">
+        <div class="oss__big"><span data-count="27">27</span></div>
+        <p class="oss__label">pull requests opened in Elasticsearch and Lucene</p>
+        <ul class="oss__topics">
+          <li>Flaky tests</li>
+          <li>Resource leaks in the chunked fetch phase</li>
+          <li>ES|QL planner bugs</li>
+          <li>Heap exhaustion in lookup joins</li>
+          <li>Null-pointer edge cases</li>
+        </ul>
+        <div class="oss__links">
+          <a href="https://github.com/elastic/elasticsearch/pulls?q=is%3Apr+author%3ASYEDMDSAAD" target="_blank" rel="noopener" class="link">Elasticsearch PRs <svg class="ic"><use href="#i-out"/></svg></a>
+          <a href="https://github.com/apache/lucene/pulls?q=is%3Apr+author%3ASYEDMDSAAD" target="_blank" rel="noopener" class="link">Lucene PRs <svg class="ic"><use href="#i-out"/></svg></a>
+        </div>
       </aside>
     </div>
   </div>
 </section>
 
-
-<!-- ========== EXPERIENCE ========== -->
-<section class="section" id="experience">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">02 — Experience</span>
-      <h2 class="section__title">Where I've <span class="grad">shipped</span>.</h2>
-    </div>
-
-    <div class="exp">
-
-      <article class="exp__item reveal">
-        <div class="exp__meta">
-          <span class="exp__date">Jan 2025 — Apr 2025</span>
-          <span class="pill">Virtual</span>
-        </div>
-        <div class="exp__body">
-          <h3 class="exp__role">Google AI/ML Virtual Internship</h3>
-          <p class="exp__org">Eduskills</p>
-          <ul class="exp__points">
-            <li><span></span>Implemented ML pipelines for classification and NLP using <strong>CNN and XGBoost</strong> across 50,000+ records, improving accuracy 15&ndash;20%.</li>
-            <li><span></span>Designed <strong>RESTful APIs</strong> for secure inter-service transmission, improving transfer efficiency by 30%.</li>
-          </ul>
-          <div class="chips">
-            <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">XGBoost</span><span class="tag">NLP</span><span class="tag">REST APIs</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="exp__item reveal">
-        <div class="exp__meta">
-          <span class="exp__date">Feb 2025 — Apr 2025</span>
-          <span class="pill">Pune</span>
-        </div>
-        <div class="exp__body">
-          <h3 class="exp__role">Yoga Pose Detection Internship</h3>
-          <p class="exp__org">Pune Institute of Computer Technology</p>
-          <ul class="exp__points">
-            <li><span></span>Developed a real-time posture analysis system using <strong>MediaPipe, CNN, XGBoost and SVM</strong> &mdash; 20% accuracy gain, 35% better error detection, 25% faster processing.</li>
-            <li><span></span><strong>Led a 3-member team</strong> across the full lifecycle: design, deployment, testing, performance tuning and UX.</li>
-            <li><span></span>Integrated secure communication and <strong>fault-tolerant</strong> response design for live-streaming analytics.</li>
-          </ul>
-          <div class="chips">
-            <span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">CNN</span><span class="tag">SVM</span><span class="tag">Team lead</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ========== PUBLICATION ========== -->
-<section class="section" id="publication">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">03 — Research</span>
-      <h2 class="section__title">Two <span class="grad">published papers</span>.</h2>
-      <p class="section__sub">One at an IEEE conference, one in a national journal — both built, trained and evaluated end to end.</p>
-    </div>
-
-    <div class="papers">
-
-    <article class="paper reveal">
-      <div class="paper__glow"></div>
-
-      <div class="paper__body">
-        <div class="paper__tags">
-          <span class="tag tag--accent">IEEE</span>
-          <span class="tag">16th ICCCNT 2025</span>
-          <span class="tag">IIT Indore</span>
-          <span class="tag">Paper #3374</span>
-        </div>
-
-        <h3 class="paper__title">Yoga Pose Detection and Correction Using Machine Learning Approaches</h3>
-
-        <p class="paper__abstract">
-          A real-time posture correction model that gives corrective feedback to yoga
-          practitioners, reaching <strong>92% pose accuracy</strong>. It pairs
-          <strong>MediaPipe</strong> pose estimation with a <strong>CNN and XGBoost</strong>
-          ensemble to classify postures and suggest alignment corrections on the fly — a
-          scalable approach for healthcare and fitness that makes guided practice accessible
-          without an instructor in the room.
-        </p>
-
-        <ul class="paper__points">
-          <li><span></span>Real-time skeletal keypoint extraction with MediaPipe + OpenCV</li>
-          <li><span></span>Multi-model classification (CNN / XGBoost / SVM) for posture accuracy</li>
-          <li><span></span>Per-joint alignment deltas translated into human-readable corrections</li>
-        </ul>
-
-        <div class="paper__stack">
-          <span class="tag">Python</span>
-          <span class="tag">MediaPipe</span>
-          <span class="tag">OpenCV</span>
-          <span class="tag">CNN</span>
-          <span class="tag">XGBoost</span>
-          <span class="tag">SVM</span>
-        </div>
-
-        <div class="paper__actions">
-          <a href="16th_ICCCNT_2025_paper_3374.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-            Read the paper
-          </a>
-          <a href="Syed_Mohammad_Saad_16th_ICCCNT_2025.pdf" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-2.5L17 22l-1.5-8.5"/></svg>
-            Certificate
-          </a>
-        </div>
-      </div>
-
-      <div class="paper__side">
-        <div class="paper__stat"><strong>92%</strong><span>pose accuracy</span></div>
-        <div class="paper__stat"><strong>2025</strong><span>year published</span></div>
-        <div class="paper__stat"><strong>IEEE</strong><span>conference venue</span></div>
-      </div>
-    </article>
-
-    <article class="paper reveal">
-      <div class="paper__glow"></div>
-
-      <div class="paper__body">
-        <div class="paper__tags">
-          <span class="tag tag--accent">Journal</span>
-          <span class="tag">Indian Journal of Technical Education</span>
-          <span class="tag">ISTE 2026</span>
-        </div>
-
-        <h3 class="paper__title">Machine Learning Techniques for Detecting DoS and DDoS Attacks: Methods, Attacks and Datasets</h3>
-
-        <p class="paper__abstract">
-          An intrusion detection system that separates malicious denial-of-service traffic
-          from benign flows using <strong>MLP and LSTM</strong> models, achieving
-          <strong>over 99% accuracy</strong> on CIC-IDS benchmarks. The paper also surveys the
-          attack surface and the datasets the field trains on, and where those datasets
-          quietly mislead.
-        </p>
-
-        <ul class="paper__points">
-          <li><span></span>MLP and LSTM classifiers trained and evaluated on CIC-IDS benchmark traffic</li>
-          <li><span></span>&gt;99% detection accuracy across volumetric and protocol-level attack classes</li>
-          <li><span></span>Comparative review of detection methods, attack taxonomies and public datasets</li>
-        </ul>
-
-        <div class="paper__stack">
-          <span class="tag">Python</span>
-          <span class="tag">MLP</span>
-          <span class="tag">LSTM</span>
-          <span class="tag">CIC-IDS</span>
-          <span class="tag">Network security</span>
-        </div>
-      </div>
-
-      <div class="paper__side">
-        <div class="paper__stat"><strong>99%+</strong><span>detection accuracy</span></div>
-        <div class="paper__stat"><strong>2026</strong><span>year published</span></div>
-        <div class="paper__stat"><strong>ISTE</strong><span>journal venue</span></div>
-      </div>
-    </article>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ========== SKILLS ========== -->
-<section class="section" id="skills">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">04 — Skills</span>
-      <h2 class="section__title">The stack I <span class="grad">actually ship with</span>.</h2>
-    </div>
-
-    <div class="skills">
-      <div class="skill-card reveal">
-        <div class="skill-card__icon">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
-        </div>
-        <h3>Languages &amp; Fundamentals</h3>
-        <div class="chips">
-          <span class="tag">Java 21</span><span class="tag">Python</span><span class="tag">SQL</span>
-          <span class="tag">JavaScript</span><span class="tag">C++</span><span class="tag">DSA</span>
-          <span class="tag">OOP</span><span class="tag">OS</span><span class="tag">DBMS</span><span class="tag">Networking</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card__icon">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>
-        </div>
-        <h3>Frontend</h3>
-        <div class="chips">
-          <span class="tag">React</span><span class="tag">Vite</span><span class="tag">TailwindCSS</span>
-          <span class="tag">Zustand</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card__icon">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg>
-        </div>
-        <h3>Backend, APIs &amp; Auth</h3>
-        <div class="chips">
-          <span class="tag">Spring Boot</span><span class="tag">FastAPI</span><span class="tag">Node.js</span>
-          <span class="tag">Express</span><span class="tag">Microservices</span><span class="tag">REST APIs</span>
-          <span class="tag">JWT / OAuth2</span><span class="tag">RBAC</span><span class="tag">AES-256</span><span class="tag">Socket.io</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card__icon">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
-        </div>
-        <h3>Data &amp; Storage</h3>
-        <div class="chips">
-          <span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span>
-          <span class="tag">Redis</span><span class="tag">Flyway</span><span class="tag">HikariCP</span>
-          <span class="tag">Schema design</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card__icon">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 19a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 17.7 9.2 4.4 4.4 0 0 1 17.5 19z"/><path d="M12 12v5M9.6 14.4 12 12l2.4 2.4"/></svg>
-        </div>
-        <h3>Cloud &amp; DevOps</h3>
-        <div class="chips">
-          <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">AWS</span>
-          <span class="tag">Lambda · EC2 · S3</span><span class="tag">API Gateway</span><span class="tag">GCP</span>
-          <span class="tag">CI/CD</span><span class="tag">Prometheus / Grafana</span><span class="tag">Testcontainers</span>
-        </div>
-      </div>
-
-      <div class="skill-card reveal">
-        <div class="skill-card__icon">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4 3.5 3.5 0 0 0-1 6.8A3.5 3.5 0 0 0 12 21a3.5 3.5 0 0 0 5-7.2A3.5 3.5 0 0 0 16 7a4 4 0 0 0-4-4z"/><path d="M12 3v18"/></svg>
-        </div>
-        <h3>ML &amp; AI</h3>
-        <div class="chips">
-          <span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">CNN</span>
-          <span class="tag">XGBoost</span><span class="tag">SVM</span><span class="tag">LSTM / MLP</span>
-          <span class="tag">LLM / Ollama</span><span class="tag">AWS Comprehend</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ========== WORK ========== -->
+<!-- ============ WORK ============ -->
 <section class="section" id="work">
   <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">05 — Work</span>
-      <h2 class="section__title">Things I've <span class="grad">designed &amp; built</span>.</h2>
-      <p class="section__sub">Twelve projects across distributed systems, machine learning and security. Most are live — click through.</p>
+    <header class="sec-head">
+      <span class="eyebrow reveal"><span>03</span> Selected work</span>
+      <h2 class="sec-title" data-split-words>Other things <em>I've built</em>.</h2>
+    </header>
+
+    <div class="bento">
+      <!-- Forge -->
+      <article class="tile tile--wide reveal" data-tilt>
+        <div class="tile__visual vis-forge" aria-hidden="true">
+          <div class="vf__line vf__user">What's the air quality in Delhi?</div>
+          <div class="vf__line vf__bot">I can't do that yet. Give me a minute, I'll learn how.</div>
+          <ol class="vf__steps">
+            <li>probe api.open-meteo.com</li>
+            <li>write tool + tests</li>
+            <li>run in sandbox · 2/2 pass</li>
+            <li>check answer against source</li>
+          </ol>
+          <div class="vf__line vf__bot vf__ans">The air quality in Delhi is unhealthy, AQI 164. <span>Source: Open-Meteo</span></div>
+        </div>
+        <div class="tile__body">
+          <div class="tile__meta"><span>MCP server</span><span>TypeScript</span></div>
+          <h3>Forge</h3>
+          <p>An Alexa+ MCP server that learns new skills while you talk to it. It writes a tool, tests it live in a locked-down sandbox, checks the answer against the source, and asks before installing it.</p>
+          <a class="link" href="https://github.com/SYEDMDSAAD/forge" target="_blank" rel="noopener">Source <svg class="ic"><use href="#i-out"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Bluewren -->
+      <article class="tile tile--tall reveal" data-tilt>
+        <div class="tile__visual vis-voice" aria-hidden="true">
+          <div class="vv__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="vv__card">
+            <span class="vv__flight">BW 412 · <s>11:05</s> <b>Cancelled</b></span>
+            <span class="vv__arrow">↓</span>
+            <span class="vv__flight vv__flight--new">BW 418 · 15:45 · seats together</span>
+          </div>
+          <p class="vv__quote">"Want me to move you and Maya to it?"</p>
+        </div>
+        <div class="tile__body">
+          <div class="tile__meta"><span>MCP server</span><span>Voice</span></div>
+          <h3>Bluewren</h3>
+          <p>Disruption help for an airline on Alexa+. When a flight is cancelled it tells you first, rebooks you, explains your refund rights and books a hotel, all in one conversation.</p>
+          <div class="tile__links">
+            <a class="link" href="https://github.com/SYEDMDSAAD/bluewren" target="_blank" rel="noopener">Source <svg class="ic"><use href="#i-out"/></svg></a>
+            <a class="link" href="https://www.youtube.com/watch?v=FfZz1o_-x-c" target="_blank" rel="noopener">Demo video <svg class="ic"><use href="#i-play"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Chat -->
+      <article class="tile reveal" data-tilt>
+        <div class="tile__visual vis-chat" aria-hidden="true">
+          <div class="vc__b vc__b--in">deploy done?</div>
+          <div class="vc__b vc__b--out">yep, all green 🚀<span class="vc__seen">✓✓</span></div>
+          <div class="vc__typing"><i></i><i></i><i></i></div>
+          <span class="vc__lat">&lt;50 ms</span>
+        </div>
+        <div class="tile__body">
+          <div class="tile__meta"><span>MERN</span><span>Socket.io</span></div>
+          <h3>Real-time chat</h3>
+          <p>One-to-one and group chat with seen and unread tracking. JWT and bcrypt sessions, under 50&nbsp;ms delivery across concurrent sessions.</p>
+          <div class="tile__links">
+            <a class="link" href="https://chat-s-io.onrender.com/" target="_blank" rel="noopener">Live <svg class="ic"><use href="#i-out"/></svg></a>
+            <a class="link" href="https://github.com/SYEDMDSAAD/Chat-S.io" target="_blank" rel="noopener">Source <svg class="ic"><use href="#i-out"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Crypto -->
+      <article class="tile reveal" data-tilt>
+        <div class="tile__visual vis-tls" aria-hidden="true">
+          <div class="vt__ends"><span>client</span><span>server</span></div>
+          <div class="vt__msg vt__msg--r">ClientHello</div>
+          <div class="vt__msg vt__msg--l">ServerHello · X.509</div>
+          <div class="vt__msg vt__msg--r">ECDHE key share</div>
+          <div class="vt__msg vt__msg--both">🔒 AES-256-GCM</div>
+        </div>
+        <div class="tile__body">
+          <div class="tile__meta"><span>Java</span><span>JSSE / JCA</span></div>
+          <h3>Hybrid cryptography over TLS</h3>
+          <p>A client-server channel on TLS 1.2 with ECDHE-RSA and AES-256-GCM for forward secrecy, and X.509 certificate auth through a Java KeyStore.</p>
+          <a class="link" href="https://github.com/SYEDMDSAAD/Cryptography" target="_blank" rel="noopener">Source <svg class="ic"><use href="#i-out"/></svg></a>
+        </div>
+      </article>
+
+      <!-- HMS -->
+      <article class="tile reveal" data-tilt>
+        <div class="tile__visual vis-cal" aria-hidden="true">
+          <div class="vk__grid">
+            <i></i><i class="on"></i><i></i><i class="on"></i><i></i>
+            <i class="on"></i><i></i><i class="clash"></i><i></i><i class="on"></i>
+            <i></i><i class="on"></i><i></i><i></i><i class="on"></i>
+          </div>
+          <span class="vk__toast">Slot taken · pick 11:30?</span>
+        </div>
+        <div class="tile__body">
+          <div class="tile__meta"><span>MERN</span><span>Admin panel</span></div>
+          <h3>Hospital management</h3>
+          <p>Patients book consultations and message doctors, and an admin panel runs the rest. Scheduling clashes are caught before they reach the database.</p>
+          <a class="link" href="https://github.com/SYEDMDSAAD/HMS" target="_blank" rel="noopener">Source <svg class="ic"><use href="#i-out"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Music -->
+      <article class="tile reveal" data-tilt>
+        <div class="tile__visual vis-eq" aria-hidden="true">
+          <div class="ve__mood"><span>calm</span><span>happy</span><span>focused</span></div>
+          <div class="ve__bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="tile__body">
+          <div class="tile__meta"><span>Python</span><span>OpenCV</span></div>
+          <h3>Emotion-driven music</h3>
+          <p>Reads facial expression in real time to infer mood, then builds a Spotify queue to match how you actually feel.</p>
+          <a class="link" href="https://github.com/SYEDMDSAAD/EmotionalDrivenMusicRecommender" target="_blank" rel="noopener">Source <svg class="ic"><use href="#i-out"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Food -->
+      <article class="tile reveal" data-tilt>
+        <div class="tile__visual vis-shot" aria-hidden="true">
+          <img src="assets/img/food.webp" alt="" loading="lazy" width="1200" height="567">
+        </div>
+        <div class="tile__body">
+          <div class="tile__meta"><span>MERN</span><span>Bookings</span></div>
+          <h3>Restaurant reservations</h3>
+          <p>Table booking and pre-ordering. Diners see open slots and confirm at once, and validation on both sides stops double bookings.</p>
+          <a class="link" href="https://rest-frontend-b3wu.vercel.app/" target="_blank" rel="noopener">Live <svg class="ic"><use href="#i-out"/></svg></a>
+        </div>
+      </article>
     </div>
 
-    <!-- FLAGSHIP -->
-    <article class="flagship reveal">
-      <div class="flagship__media">
-        <img src="fintwin-landing.png" alt="FinTwin.ai four-service architecture diagram" loading="lazy">
-      </div>
-
-      <div class="flagship__body">
-        <div class="flagship__tags">
-          <span class="tag tag--accent">Flagship</span>
-          <span class="tag">Solo-built</span>
-          <span class="tag">2026</span>
-        </div>
-
-        <h3 class="flagship__title">FinTwin.ai — AI-Powered Personal Finance Platform</h3>
-
-        <p class="flagship__text">
-          A personal finance platform with bank-account aggregation via <strong>Setu AA</strong>,
-          plus budget, goal, investment and net-worth engines featuring real
-          <strong>EMI &amp; DTI</strong> computation and a water-fill savings-allocation
-          algorithm. Architected and shipped end to end, alone.
-        </p>
-
-        <ul class="flagship__points">
-          <li><span></span><strong>Architected</strong> a production-grade 4-service distributed system — React + Vite frontend, Spring Boot (Java 21) core API, a separate identity service and a Python/FastAPI AI service over PostgreSQL with 14 Flyway migrations.</li>
-          <li><span></span><strong>Engineered</strong> JWT auth with refresh-token rotation and theft detection, TOTP 2FA, Google OAuth, and RBAC via a custom Spring Security permission evaluator, with AES-256-GCM field-level encryption of financial data.</li>
-          <li><span></span><strong>Deployed</strong> a self-hosted LLM copilot on Ollama (qwen2.5 / phi3) using an OpenAI-style tool-calling loop that fetches user data through a secured internal API rather than prompt-stuffing — no paid API dependency.</li>
-          <li><span></span><strong>Eliminated</strong> N+1 query hotspots with Redis-backed distributed rate limiting, Caffeine caching, HikariCP tuning, paginated batch jobs replacing full-table scans, and parallel market-data fetching.</li>
-          <li><span></span><strong>Shipped</strong> on Docker and Kubernetes (HPA 2&nbsp;&rarr;&nbsp;10 replicas, zero-downtime rolling deploys) with Prometheus/Grafana monitoring, 5 CI/CD workflows and ~180 tests (48 Testcontainers, 129 pytest).</li>
-        </ul>
-
-        <div class="chips">
-          <span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">FastAPI</span>
-          <span class="tag">React + Vite</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
-          <span class="tag">Kubernetes</span><span class="tag">Ollama</span><span class="tag">Prometheus</span>
-        </div>
-
-        <div class="flagship__actions">
-          <a href="https://fintwin-web.azurewebsites.net" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-              <polyline points="15 3 21 3 21 9"/>
-              <line x1="10" y1="14" x2="21" y2="3"/>
-            </svg>
-            Live Demo
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <div class="filters reveal" role="tablist">
-      <button class="filter is-active" data-filter="all">All</button>
-      <button class="filter" data-filter="fullstack">Full Stack</button>
-      <button class="filter" data-filter="ml">AI &amp; ML</button>
-      <button class="filter" data-filter="security">Security</button>
-      <button class="filter" data-filter="frontend">Frontend</button>
-    </div>
-
-    <div class="work" id="work-grid">
-
-      <!-- 1 -->
-      <article class="card reveal" data-cat="fullstack">
-        <div class="card__media">
-          <img src="work5.png" alt="Real-time chat application interface" loading="lazy">
-          <span class="card__badge">Live</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Real-Time Chat Platform</h3>
-          <p class="card__text">One-to-one and group messaging with delivery-status tracking over Socket.io. Sessions secured with JWT and bcrypt; sustained <strong>&lt;50 ms message delivery</strong> across concurrent sessions.</p>
-          <div class="chips">
-            <span class="tag">MERN</span><span class="tag">Socket.io</span><span class="tag">JWT</span><span class="tag">bcrypt</span><span class="tag">Zustand</span>
-          </div>
-          <div class="card__links">
-            <a href="https://chat-s-io.onrender.com/" target="_blank" rel="noopener" class="link">Live demo
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2 -->
-      <article class="card reveal" data-cat="ml fullstack">
-        <div class="card__media">
-          <img src="cover-sentiment.svg" alt="Sentiment analysis pipeline diagram" loading="lazy">
-          <span class="card__badge card__badge--code">Code</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Sentiment Analysis Service</h3>
-          <p class="card__text">A Spring Boot microservice on AWS Comprehend that scores user feedback in real time through <strong>asynchronous, non-blocking REST APIs</strong>. Environment-scoped credentials and defensive error handling throughout.</p>
-          <div class="chips">
-            <span class="tag">Spring Boot</span><span class="tag">AWS Comprehend</span><span class="tag">Flask</span><span class="tag">boto3</span><span class="tag">Async REST</span>
-          </div>
-          <div class="card__links">
-            <a href="https://github.com/SYEDMDSAAD/SentimentAnalysis/" target="_blank" rel="noopener" class="link">Source
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3 -->
-      <article class="card reveal" data-cat="security">
-        <div class="card__media">
-          <img src="cover-crypto.svg" alt="TLS handshake diagram" loading="lazy">
-          <span class="card__badge card__badge--code">Code</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Hybrid Cryptography over TLS</h3>
-          <p class="card__text">Client–server channel built on Java SSL sockets: TLS 1.2 with ECDHE-RSA key exchange and AES-256-GCM for confidentiality, integrity and perfect forward secrecy. Custom X.509 certificate auth via Java KeyStore.</p>
-          <div class="chips">
-            <span class="tag">Java 17</span><span class="tag">JSSE / JCA</span><span class="tag">AES-256-GCM</span><span class="tag">RSA</span><span class="tag">X.509</span>
-          </div>
-          <div class="card__links">
-            <a href="https://github.com/SYEDMDSAAD/Cryptography/" target="_blank" rel="noopener" class="link">Source
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4 -->
-      <article class="card reveal" data-cat="fullstack">
-        <div class="card__media">
-          <img src="work3.png" alt="Restaurant reservation system" loading="lazy">
-          <span class="card__badge">Live</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Food Reservation System</h3>
-          <p class="card__text">Table booking and pre-ordering for restaurants. Diners browse open slots and confirm instantly, while server- and client-side validation prevents double-booking and keeps order state accurate.</p>
-          <div class="chips">
-            <span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Node.js</span>
-          </div>
-          <div class="card__links">
-            <a href="https://rest-frontend-b3wu.vercel.app/" target="_blank" rel="noopener" class="link">Live demo
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5 -->
-      <article class="card reveal" data-cat="fullstack">
-        <div class="card__media">
-          <img src="cover-hospital.svg" alt="Appointment scheduling board diagram" loading="lazy">
-          <span class="card__badge card__badge--code">Code</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Hospital Management System</h3>
-          <p class="card__text">Patients log in, book consultations and message providers; an admin panel manages appointments, messages and doctor records. Scheduling conflicts are caught before they reach the database.</p>
-          <div class="chips">
-            <span class="tag">MERN</span><span class="tag">Auth</span><span class="tag">Admin panel</span>
-          </div>
-          <div class="card__links">
-            <a href="https://github.com/SYEDMDSAAD/HMS" target="_blank" rel="noopener" class="link">Source
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 6 -->
-      <article class="card reveal" data-cat="ml">
-        <div class="card__media">
-          <img src="cover-music.svg" alt="Facial emotion to playlist diagram" loading="lazy">
-          <span class="card__badge card__badge--code">Code</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Emotion-Driven Music Recommender</h3>
-          <p class="card__text">Reads facial expression in real time to infer mood, then curates a matching Spotify queue — recommendations that respond to how someone actually feels rather than what they last played.</p>
-          <div class="chips">
-            <span class="tag">Python</span><span class="tag">Computer Vision</span><span class="tag">Spotify API</span>
-          </div>
-          <div class="card__links">
-            <a href="https://github.com/SYEDMDSAAD/EmotionalDrivenMusicRecommender" target="_blank" rel="noopener" class="link">Source
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 7 -->
-      <article class="card reveal" data-cat="ml frontend">
-        <div class="card__media">
-          <img src="cover-legal.svg" alt="Legal chatbot conversation diagram" loading="lazy">
-          <span class="card__badge card__badge--code">Code</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Legal Assistance Chatbot</h3>
-          <p class="card__text">A dialogue system that makes legal process legible to non-lawyers, backed by LLMs over a legal knowledge base. I built the front end — the conversation flow, case breakdowns and result views.</p>
-          <div class="chips">
-            <span class="tag">LLMs</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">CSS</span>
-          </div>
-          <div class="card__links">
-            <a href="https://github.com/SmitDeshmukh16/Legal-Chatbot" target="_blank" rel="noopener" class="link">Source
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 8 -->
-      <article class="card reveal" data-cat="frontend">
-        <div class="card__media">
-          <img src="work1.png" alt="Carbon footprint calculator" loading="lazy">
-          <span class="card__badge">Live</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Track My Carbon</h3>
-          <p class="card__text">A calculator for the CO₂e an individual or organisation emits directly and indirectly over a period — built to turn an abstract number into something people can act on.</p>
-          <div class="chips">
-            <span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
-          </div>
-          <div class="card__links">
-            <a href="https://trackmycarbon.software/" target="_blank" rel="noopener" class="link">Live site
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 9 -->
-      <article class="card reveal" data-cat="frontend">
-        <div class="card__media">
-          <img src="work4.png" alt="E-commerce storefront" loading="lazy">
-          <span class="card__badge">Live</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">E-Commerce Storefront</h3>
-          <p class="card__text">A storefront focused on browse-and-compare: clear product displays, unfussy navigation and a checkout path with secure payment integration.</p>
-          <div class="chips">
-            <span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Payments</span>
-          </div>
-          <div class="card__links">
-            <a href="https://enchanting-faun-bc2adc.netlify.app/" target="_blank" rel="noopener" class="link">Live demo
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 10 -->
-      <article class="card reveal" data-cat="ml">
-        <div class="card__media">
-          <img src="cover-yoga.svg" alt="Pose skeleton with keypoint detection diagram" loading="lazy">
-          <span class="card__badge card__badge--paper">IEEE</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Yoga Pose Detection &amp; Correction</h3>
-          <p class="card__text">The system behind my ICCCNT 2025 paper: MediaPipe pose estimation feeding a CNN / XGBoost / SVM ensemble that classifies posture and returns real-time alignment corrections.</p>
-          <div class="chips">
-            <span class="tag">Python</span><span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">CNN</span><span class="tag">XGBoost</span>
-          </div>
-          <div class="card__links">
-            <a href="16th_ICCCNT_2025_paper_3374.pdf" target="_blank" rel="noopener" class="link">Read the paper
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 11 -->
-      <article class="card reveal" data-cat="ml security">
-        <div class="card__media">
-          <img src="cover-ddos.svg" alt="DoS and DDoS detection neural network diagram" loading="lazy">
-          <span class="card__badge card__badge--paper">Journal</span>
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">DoS / DDoS Intrusion Detection</h3>
-          <p class="card__text">An intrusion detection system separating attack traffic from benign flows with MLP and LSTM models, reaching <strong>&gt;99% accuracy</strong> on CIC-IDS benchmarks. Published in the ISTE journal, 2026.</p>
-          <div class="chips">
-            <span class="tag">Python</span><span class="tag">MLP</span><span class="tag">LSTM</span><span class="tag">CIC-IDS</span><span class="tag">Network security</span>
-          </div>
-          <div class="card__links">
-            <a href="#publication" class="link">Read about the paper
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="work__more reveal">
-      <a href="https://github.com/SYEDMDSAAD" target="_blank" rel="noopener" class="btn btn--ghost">
-        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.22-3.37-1.22-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-        See everything on GitHub
-      </a>
+    <div class="also reveal">
+      <span class="also__label">Also built</span>
+      <ul>
+        <li><b>Sentiment analysis service</b> Spring Boot microservice on AWS Comprehend with async REST</li>
+        <li><b>Legal assistance chatbot</b> Front end for an LLM legal helper (team project)</li>
+        <li><a href="https://enchanting-faun-bc2adc.netlify.app/" target="_blank" rel="noopener"><b>E-commerce storefront</b> Browse, compare and check out <svg class="ic"><use href="#i-out"/></svg></a></li>
+        <li><b>Track My Carbon</b> Personal and company CO₂e calculator</li>
+      </ul>
     </div>
   </div>
 </section>
 
-
-<!-- ========== CONTACT ========== -->
-<section class="section section--contact" id="contact">
+<!-- ============ RESEARCH ============ -->
+<section class="section" id="research">
   <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">06 — Contact</span>
-      <h2 class="section__title">Let's build <span class="grad">something</span>.</h2>
-      <p class="section__sub">Hiring for 2026, want to collaborate, or just curious about a project? My inbox is open.</p>
+    <header class="sec-head">
+      <span class="eyebrow reveal"><span>04</span> Research</span>
+      <h2 class="sec-title" data-split-words>Two <em>published</em> papers.</h2>
+      <p class="sec-sub reveal">One at an IEEE conference, one in a national journal. Both built, trained and evaluated end to end.</p>
+    </header>
+
+    <div class="papers">
+      <article class="paper reveal" data-tilt>
+        <svg class="paper__art" viewBox="0 0 200 200" aria-hidden="true">
+          <g class="pose" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M100 42 L100 104 M100 58 L64 40 M100 58 L136 40 M100 104 L70 160 M100 104 L132 150 L156 160"/>
+          </g>
+          <g class="joints" fill="currentColor">
+            <circle cx="100" cy="30" r="9"/><circle cx="100" cy="58" r="4"/><circle cx="64" cy="40" r="4"/><circle cx="136" cy="40" r="4"/><circle cx="100" cy="104" r="4"/><circle cx="70" cy="160" r="4"/><circle cx="132" cy="150" r="4"/><circle cx="156" cy="160" r="4"/>
+          </g>
+        </svg>
+        <div class="paper__metric"><span data-count="92">92</span>%<small>pose accuracy</small></div>
+        <div class="paper__venue"><span class="badge-ieee">IEEE</span> 16th ICCCNT 2025 · IIT Indore</div>
+        <h3>Yoga Pose Detection and Correction Using Machine Learning Approaches</h3>
+        <p>A real-time posture-correction model. MediaPipe pose estimation feeds a CNN and XGBoost ensemble that classifies the pose and turns per-joint differences into corrections a person can follow.</p>
+        <div class="paper__links">
+          <a href="16th_ICCCNT_2025_paper_3374.pdf" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><svg class="ic"><use href="#i-file"/></svg> Read the paper</a>
+          <a href="Syed_Mohammad_Saad_16th_ICCCNT_2025.pdf" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><svg class="ic"><use href="#i-award"/></svg> Certificate</a>
+        </div>
+      </article>
+
+      <article class="paper reveal" data-tilt>
+        <svg class="paper__art" viewBox="0 0 200 200" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55">
+            <path d="M40 50 L100 100 M40 100 L100 100 M40 150 L100 100 M100 100 L160 70 M100 100 L160 130"/>
+          </g>
+          <g fill="currentColor">
+            <circle cx="40" cy="50" r="6"/><circle cx="40" cy="100" r="6"/><circle cx="40" cy="150" r="6"/><circle cx="100" cy="100" r="10"/><circle cx="160" cy="70" r="6"/><circle class="bad" cx="160" cy="130" r="6"/>
+          </g>
+          <g class="packets" fill="currentColor"><circle r="3"><animateMotion dur="2.4s" repeatCount="indefinite" path="M40 50 L100 100 L160 130"/></circle><circle r="3"><animateMotion dur="2.4s" begin=".8s" repeatCount="indefinite" path="M40 150 L100 100 L160 70"/></circle><circle r="3"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" path="M40 100 L100 100 L160 130"/></circle></g>
+        </svg>
+        <div class="paper__metric"><span data-count="99">99</span>%+<small>detection accuracy</small></div>
+        <div class="paper__venue"><span class="badge-ieee badge-ieee--alt">Journal</span> Indian Journal of Technical Education · ISTE 2026</div>
+        <h3>Machine Learning Techniques for Detecting DoS and DDoS Attacks: Methods, Attacks and Datasets</h3>
+        <p>An intrusion detection system that separates attack traffic from normal flows with MLP and LSTM models, over 99% accurate on CIC-IDS benchmarks, plus a review of methods and the datasets the field trains on.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / JOURNEY ============ -->
+<section class="section" id="about">
+  <div class="container about">
+    <aside class="about__card reveal" data-tilt>
+      <div class="about__photo">
+        <picture>
+          <source srcset="assets/img/saad.webp" type="image/webp">
+          <img src="assets/img/saad.jpg" alt="Syed Mohammad Saad" width="880" height="1100" loading="lazy">
+        </picture>
+      </div>
+      <div class="about__id">
+        <strong>Syed Mohammad Saad</strong>
+        <span>Software Engineer</span>
+      </div>
+      <ul class="about__facts">
+        <li><svg class="ic"><use href="#i-pin"/></svg>Pune, India · <span id="pune-time">local time</span></li>
+        <li><svg class="ic"><use href="#i-award"/></svg>B.E. Information Technology, PICT · 8.94</li>
+      </ul>
+    </aside>
+
+    <div class="about__main">
+      <header class="sec-head sec-head--left">
+        <span class="eyebrow reveal"><span>05</span> About</span>
+        <h2 class="sec-title" data-split-words>Engineer first, <em>builder always</em>.</h2>
+      </header>
+      <div class="about__text reveal">
+        <p>I like software that's still working at 3&nbsp;a.m. That means real error handling, real tests, honest monitoring, and security designed in from the first commit instead of bolted on.</p>
+        <p>I graduated in Information Technology from Pune Institute of Computer Technology in 2026. These days I'm building FinTwin AI, and I'm looking for a backend or software engineering role where I can do this kind of work on a team.</p>
+      </div>
+
+      <ol class="timeline" id="timeline">
+        <li class="tl reveal">
+          <span class="tl__when">Jun 2026 · now</span>
+          <h3>Building FinTwin AI</h3>
+          <p>Designed, built and run an AI money copilot, from the schema to the Azure deploy. Live in public beta.</p>
+        </li>
+        <li class="tl reveal">
+          <span class="tl__when">Feb 2026 · May 2026</span>
+          <h3>Open source: Elasticsearch &amp; Lucene</h3>
+          <p>27 pull requests on flaky tests, resource leaks, ES|QL planner bugs and memory use in lookup joins.</p>
+        </li>
+        <li class="tl reveal">
+          <span class="tl__when">Feb 2025 · Apr 2025</span>
+          <h3>Machine Learning Intern | Team Lead <small>PICT</small></h3>
+          <p>Led a 3-person team building real-time posture analysis with MediaPipe, CNN, XGBoost and SVM: 20% more accurate, 35% better error detection, 25% faster. Published at IEEE ICCCNT 2025.</p>
+        </li>
+        <li class="tl reveal">
+          <span class="tl__when">Jan 2025 · Apr 2025</span>
+          <h3>Machine Learning Intern <small>Google AI/ML Virtual Internship · EduSkills Foundation</small></h3>
+          <p>ML pipelines for classification and NLP with CNN and XGBoost over 50,000+ records, improving accuracy 15 to 20%.</p>
+        </li>
+        <li class="tl reveal">
+          <span class="tl__when">2022 · 2026</span>
+          <h3>B.E. Information Technology <small>Pune Institute of Computer Technology</small></h3>
+          <p>CGPA 8.94 / 10. Before that: HSC Science 9.89, CBSE Class X 9.64.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section class="section section--tight" id="stack">
+  <div class="container">
+    <header class="sec-head">
+      <span class="eyebrow reveal"><span>06</span> Stack</span>
+      <h2 class="sec-title" data-split-words>What I <em>reach for</em>.</h2>
+    </header>
+    <div class="stack">
+      <div class="stack__group reveal"><h3>Languages</h3><p><span>Java 21</span><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span><span>C++</span></p></div>
+      <div class="stack__group reveal"><h3>Backend &amp; APIs</h3><p><span>Spring Boot</span><span>Spring Security</span><span>JPA</span><span>FastAPI</span><span>Node.js</span><span>Express</span><span>REST</span><span>JWT · OAuth2</span></p></div>
+      <div class="stack__group reveal"><h3>AI</h3><p><span>LLM tool calling</span><span>Evals</span><span>Ollama</span><span>MCP</span><span>scikit-learn</span><span>XGBoost</span><span>OpenCV</span><span>MediaPipe</span></p></div>
+      <div class="stack__group reveal"><h3>Data</h3><p><span>PostgreSQL</span><span>Flyway</span><span>MySQL</span><span>MongoDB</span><span>Redis</span><span>HikariCP</span></p></div>
+      <div class="stack__group reveal"><h3>Cloud &amp; delivery</h3><p><span>Docker</span><span>Azure</span><span>AWS</span><span>GCP</span><span>GitHub Actions</span><span>Grafana</span></p></div>
+      <div class="stack__group reveal"><h3>Testing &amp; frontend</h3><p><span>JUnit 5</span><span>Testcontainers</span><span>pytest</span><span>Vitest</span><span>React</span><span>Vite</span><span>Tailwind</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="contact__glow" aria-hidden="true"></div>
+  <div class="container">
+    <header class="sec-head sec-head--center">
+      <span class="eyebrow reveal"><span>07</span> Contact</span>
+      <h2 class="contact__title" data-split-words>Let's build something <em>that keeps running</em>.</h2>
+      <p class="sec-sub reveal">Hiring for a backend or software engineering role, or want to talk about FinTwin? My inbox is open.</p>
+    </header>
+
+    <div class="contact__mail reveal">
+      <a href="mailto:mdsaadsyed29@gmail.com" class="contact__email magnetic">mdsaadsyed29@gmail.com</a>
+      <button class="copy-chip copy-chip--lg" type="button" data-copy="mdsaadsyed29@gmail.com" aria-label="Copy email address">
+        <span>Copy</span>
+        <svg class="ic ic--copy"><use href="#i-copy"/></svg>
+        <svg class="ic ic--ok"><use href="#i-check"/></svg>
+      </button>
     </div>
 
-    <div class="contact">
-      <div class="contact__info reveal">
-        <a class="info" href="mailto:mdsaadsyed29@gmail.com">
-          <span class="info__icon">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>
-          </span>
-          <span class="info__body"><span>Email</span><strong>mdsaadsyed29@gmail.com</strong></span>
+    <div class="contact__grid">
+      <div class="contact__links reveal">
+        <a href="https://www.linkedin.com/in/syedmdsaad/" target="_blank" rel="noopener" class="clink">
+          <svg class="ic"><use href="#i-linkedin"/></svg><span><small>LinkedIn</small>in/syedmdsaad</span><svg class="ic clink__go"><use href="#i-out"/></svg>
         </a>
-
-        <a class="info" href="tel:+917887398671">
-          <span class="info__icon">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.8 2.2z"/></svg>
-          </span>
-          <span class="info__body"><span>Phone</span><strong>+91 78873 98671</strong></span>
+        <a href="https://github.com/SYEDMDSAAD" target="_blank" rel="noopener" class="clink">
+          <svg class="ic"><use href="#i-github"/></svg><span><small>GitHub</small>SYEDMDSAAD</span><svg class="ic clink__go"><use href="#i-out"/></svg>
         </a>
-
-        <a class="info" href="https://www.linkedin.com/in/syed-mohammad-saad-640144213/" target="_blank" rel="noopener">
-          <span class="info__icon">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.65h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.95-3.07-1.95 0-2.25 1.46-2.25 2.97V21h-4V9z"/></svg>
-          </span>
-          <span class="info__body"><span>LinkedIn</span><strong>syed-mohammad-saad</strong></span>
+        <a href="tel:+917887398671" class="clink">
+          <svg class="ic"><use href="#i-phone"/></svg><span><small>Phone</small>+91 78873 98671</span><svg class="ic clink__go"><use href="#i-out"/></svg>
         </a>
-
-        <a class="info" href="https://github.com/SYEDMDSAAD" target="_blank" rel="noopener">
-          <span class="info__icon">
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.22-3.37-1.22-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-          </span>
-          <span class="info__body"><span>GitHub</span><strong>SYEDMDSAAD</strong></span>
-        </a>
-
-        <div class="contact__cta">
-          <p>Prefer the short version? Grab the one-page resume, or the full CV for the detail.</p>
-          <a href="Syed_MohammadSaad_Resume.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download my resume
-          </a>
-          <a href="SyedMohammadSaad_CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Download my CV
-          </a>
+        <div class="contact__docs">
+          <a href="Syed_MohammadSaad_Resume.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm"><svg class="ic"><use href="#i-down"/></svg> Résumé</a>
+          <a href="SyedMohammadSaad_CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost btn--sm"><svg class="ic"><use href="#i-down"/></svg> Full CV</a>
         </div>
       </div>
 
-      <form id="contactForm" class="contact__form reveal" novalidate>
+      <form id="contact-form" class="form reveal" novalidate>
         <div class="field">
-          <label for="cf-name">Name</label>
-          <input id="cf-name" type="text" name="name" placeholder="Syed Saad" required>
+          <input id="cf-name" name="name" type="text" placeholder=" " autocomplete="name" required>
+          <label for="cf-name">Your name</label>
         </div>
         <div class="field">
+          <input id="cf-email" name="email" type="email" placeholder=" " autocomplete="email" required>
           <label for="cf-email">Email</label>
-          <input id="cf-email" type="email" name="email" placeholder="yours@company.com" required>
         </div>
         <div class="field">
-          <label for="cf-msg">Message</label>
-          <textarea id="cf-msg" name="message" rows="6" placeholder="Tell me about the role or the idea…" required></textarea>
+          <textarea id="cf-msg" name="message" rows="4" placeholder=" " required></textarea>
+          <label for="cf-msg">What's on your mind?</label>
         </div>
         <button type="submit" class="btn btn--primary btn--block" id="cf-submit">
-          <span class="btn__label">Send message</span>
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          <span class="btn__label">Send message</span> <svg class="ic"><use href="#i-arrow"/></svg>
         </button>
-        <p class="form__note">Or email me directly at <a href="mailto:mdsaadsyed29@gmail.com">mdsaadsyed29@gmail.com</a></p>
       </form>
     </div>
   </div>
@@ -884,45 +802,33 @@
 
 </main>
 
-<!-- ========== FOOTER ========== -->
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <span class="nav__logo-mark">S</span>
-      <div>
-        <strong>Syed Mohammad Saad</strong>
-        <span>Software Engineer · Pune, India</span>
-      </div>
+      <span class="logo__mark">S</span>
+      <span>Syed Mohammad Saad · Software Engineer · Pune</span>
     </div>
-
-    <nav class="footer__nav">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#publication">Research</a>
-      <a href="#skills">Skills</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="footer__social">
-      <a href="https://github.com/SYEDMDSAAD" target="_blank" rel="noopener" class="social" aria-label="GitHub">
-        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.9c-2.78.62-3.37-1.22-3.37-1.22-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/syed-mohammad-saad-640144213/" target="_blank" rel="noopener" class="social" aria-label="LinkedIn">
-        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.65h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.6c0-1.34-.03-3.07-1.95-3.07-1.95 0-2.25 1.46-2.25 2.97V21h-4V9z"/></svg>
-      </a>
-      <a href="mailto:mdsaadsyed29@gmail.com" class="social" aria-label="Email">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>
-      </a>
+    <div class="footer__right">
+      <span>© <span id="year">2026</span> Syed Mohammad Saad</span>
+      <a href="#top" class="link">Back to top ↑</a>
     </div>
   </div>
-  <div class="container footer__base">
-    <p>© <span id="year">2026</span> Syed Mohammad Saad. Built from scratch — no templates.</p>
-    <a href="#home" class="footer__top">Back to top
-      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
-    </a>
-  </div>
+  <div class="footer__word" aria-hidden="true">SAAD</div>
 </footer>
+
+<!-- ============ COMMAND MENU ============ -->
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command menu" hidden>
+  <div class="cmdk__backdrop" data-close></div>
+  <div class="cmdk__panel">
+    <div class="cmdk__search">
+      <svg class="ic"><use href="#i-search"/></svg>
+      <input id="cmdk-input" type="text" placeholder="Jump to a section or run an action…" autocomplete="off" spellcheck="false" aria-controls="cmdk-list">
+      <kbd>Esc</kbd>
+    </div>
+    <ul class="cmdk__list" id="cmdk-list" role="listbox"></ul>
+  </div>
+</div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
