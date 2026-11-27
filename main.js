@@ -469,7 +469,7 @@
     { g: 'Go to', label: 'About and journey', icon: 'i-arrow', run: go('#about'), k: 'experience education timeline' },
     { g: 'Go to', label: 'Stack', icon: 'i-arrow', run: go('#stack'), k: 'skills tech' },
     { g: 'Go to', label: 'Contact', icon: 'i-mail', run: go('#contact'), k: 'hire email message' },
-    { g: 'Actions', label: 'Open the FinTwin live demo', icon: 'i-out', run: open('https://fintwin-web.azurewebsites.net'), k: 'try demo' },
+    { g: 'Actions', label: 'Open the FinTwin live demo', icon: 'i-out', run: open('https://fintwin-web-171222129367.asia-south1.run.app'), k: 'try demo' },
     { g: 'Actions', label: 'Copy email address', icon: 'i-copy', run: function () { copyEmail(); }, k: 'mail' },
     { g: 'Actions', label: 'Download résumé', icon: 'i-down', run: open('Syed_MohammadSaad_Resume.pdf'), k: 'resume cv pdf' },
     { g: 'Actions', label: 'Download full CV', icon: 'i-down', run: open('SyedMohammadSaad_CV.pdf'), k: 'resume cv pdf' },
